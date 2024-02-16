@@ -2,6 +2,10 @@
 //     red,pink,blue,black,yello,white
 // }
 // let x = color.blue;
+
+
+
+
 var person = /** @class */ (function () {
     function person(p, n) {
         this.rollno = p;
