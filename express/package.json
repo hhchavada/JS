@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "harsh": "nodemon app.js"
+    "start": "node server2.js",
+    "harsh": "nodemon server2.js"
   },
   "keywords": [],
   "author": "",
