@@ -1,0 +1,4 @@
+(main)
+npm i package.json
+npm init -y 
+npm i -d nodemon
