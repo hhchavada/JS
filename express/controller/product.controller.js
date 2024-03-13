@@ -7,7 +7,7 @@ exports.addProduct = (req, res) => {
     res.status(201).json({message: 'Product added successfully...'}) 
 };
 
-exports.getAllProducts = (req, res) => {
+exports.getAllProduct = (req, res) => {
     res.status(200).json(products);
 };
 
