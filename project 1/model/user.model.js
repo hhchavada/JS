@@ -6,6 +6,7 @@ const userSchema = mongoose.Schema({
     gender: { type: String, enum: ['Male', 'Female'] },
     email: {type: String},
     password: {type: String},
+    profileImage: {type: String},
     age: {type: Number},
     isDelete :{
         type: Boolean,
