@@ -99,4 +99,27 @@ exports.deleteUser =  async (req,res)=>{
    }
 };
 
+exports.addNewUser = async (req , res) => {
+    try{
+        let { firstName, lastName , email , password , age, gender , profileImage} = req.body;
+        let user = await User.findOne({email: email, isDelete : false});
+        if(user){
+            return res.status(400).json({message: 'user already exist...'});
+        }
+        if(req.file){
+            console.log(req.file);
+           profileImage = req.file.path;
+            // profileImage = req.file.path.replace(/\\/g,"/");
+        }
+        user = await User.create({
+            ...req.body,
+             profileImage
+        });
+        user.save();
+        res.status(201).json({user});
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message: `internel server error ${error.message}`});
+    }
+}
 
