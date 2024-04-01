@@ -6,10 +6,10 @@ const port=process.env.PORT;
 
 app.use(express.json());
 
-const adminsRoutes = require('./src/routes/admin/index.routes');
+const adminsRoutes = require('./routes/admin/index.routes');
 app.use('/api/admin' , adminsRoutes);
 
-const userRoutes = require('./src/routes/user/index.routes');
+const userRoutes = require('./routes/user/index.routes');
 app.use('/api/user' , userRoutes);
 
 app.listen(port , async() => {
